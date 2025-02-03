@@ -1,0 +1,13 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+    <h2>Your Profile</h2>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Date Joined: {{ user.date_joined }}</p>
+    <p>Last Updated: {{ user.last_login }}</p>
+    <a href="{% url 'dashboard' %}">Back to Dashboard</a>
+    <a href="{% url 'logout' %}">Logout</a>
+{% endblock %}

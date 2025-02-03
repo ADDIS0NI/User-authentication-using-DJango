@@ -1,0 +1,15 @@
+<!-- accounts/templates/accounts/forgot_password.html -->
+{% extends 'accounts/base.html' %}
+
+{% block title %}Forgot Password{% endblock %}
+
+{% block content %}
+    <h2>Forgot Password</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'login' %}">Back to Login</a>
+{% endblock %}
